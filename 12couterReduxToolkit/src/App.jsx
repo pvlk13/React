@@ -1,14 +1,18 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
+//import { increment, decrement } from "./store/counterSlice";
+import { useSelector, useDispatch } from "react-redux";
+import { CounterControls } from "./components/counterControls";
+import { CounterDisplay } from "./components/counterDisplay";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
-      <h1>Counter RTK</h1>
+      <h2>
+        Redux Toolkit Implementation{" "}
+        <span className="component-type">(I am the parent component)</span>{" "}
+      </h2>
+      <CounterControls />
+      <CounterDisplay />
     </>
   );
 }
