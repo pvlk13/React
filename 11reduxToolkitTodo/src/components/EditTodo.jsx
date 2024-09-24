@@ -17,7 +17,7 @@ function EditTodo({ todo }) {
   };
 
   return (
-    <div className="flex">
+    <div className="flex space-x-3 ">
       <input
         type="text"
         value={todoMsg}
