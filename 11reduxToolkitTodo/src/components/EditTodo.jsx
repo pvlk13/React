@@ -23,7 +23,7 @@ function EditTodo({ todo }) {
         value={todoMsg}
         onChange={(e) => setTodoMsg(e.target.value)}
         readOnly={!isTodoEditable}
-        className="shadow appearance-none bg-gray-200 focus:shadow-outline border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500 inline-block margin-right: -m-4;"
+        className="shadow appearance-none w-fit bg-gray-200 focus:shadow-outline border-2 border-gray-200 rounded  py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500 inline-block margin-right: -m-4;"
       />
 
       <span>

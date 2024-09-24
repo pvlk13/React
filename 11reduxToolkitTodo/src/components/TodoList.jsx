@@ -9,10 +9,10 @@ function TodoList() {
   return (
     <>
       <div>Todos</div>
-      <ul className="list-none">
+      <ul className="list-none p-10 flex flex-wrap items-center">
         {todosList.map((todo) => (
           <li
-            className="mt-4 flex justify-between items-center bg-zinc-800 px-4 py-2 rounded"
+            className="mt-4 margin-right:50px; flex  items-center bg-zinc-800 px-4 py-2 rounded w-3/4 justify-between "
             key={todo.id}
           >
             <EditTodo todo={todo} />
