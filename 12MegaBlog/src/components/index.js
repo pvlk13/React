@@ -5,8 +5,9 @@ import LogoutBtn from "./Header/LogoutBtn";
 import Button from "./Button"
 import Input from "./Input"
 import authService from "../appwrite/auth";
+import RTE from "./RTE";
 
 import Container from './Container/Container';
 
 
-export { Header, Footer, Logo, LogoutBtn, Container, Button, Input };
+export { Header, Footer, Logo, LogoutBtn, Container, Button, Input, RTE };
