@@ -1,10 +1,10 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import { Box } from "@mui/material";
-import Footer from "../components/Footer.jsx";
-import Home from "../pages/Home.jsx";
-import ExerciseDetails from "../pages/ExerciseDetails.jsx";
-import Navbar from "../components/Navbar.jsx";
+import ExerciseDetails from "./pages/ExerciseDetails";
+import Home from "./pages/Home";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 function App() {
   return (
