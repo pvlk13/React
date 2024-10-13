@@ -39,7 +39,8 @@ const HeroBanner = () => {
         sx={{
           opacity: "0.1",
           display: { lg: "block", xs: "none" },
-          fontSize: "200px",
+          fontSize: "180px",
+          mt: "-180px",
         }}
       >
         Exercises
@@ -50,7 +51,7 @@ const HeroBanner = () => {
         className="hero-banner-img"
         style={{
           width: "600px",
-          height: "700px",
+          height: "750px",
           position: "absolute",
           padding: "50px",
         }}
