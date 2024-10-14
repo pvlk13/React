@@ -61,6 +61,7 @@ const SearchExercise = ({ setExercises, bodyPart, setBodyPart }) => {
             mb: "20px",
             borderRadius: "10px",
             border: "none",
+            marginLeft: "400px",
           }}
           value={search}
           placeholder="Search Exercises"

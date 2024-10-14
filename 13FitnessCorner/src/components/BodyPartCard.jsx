@@ -8,7 +8,6 @@ const BodyPartCard = ({ item, bodyPart, setBodyPart }) => {
       type="button"
       alignItems="center"
       justifyContent="center"
-      className="bodyPart-card"
       sx={{
         borderTop: bodyPart === item ? "2px solid #ff2625" : "",
         backgroundColor: "#fff",
@@ -25,7 +24,7 @@ const BodyPartCard = ({ item, bodyPart, setBodyPart }) => {
       <img
         src={Icon}
         alt="dumbbell"
-        style={{ width: "30px", height: "30px" }}
+        style={{ width: "20px", height: "20px" }}
       />
       <Typography
         fontSize="20px"
