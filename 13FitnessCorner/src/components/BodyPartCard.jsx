@@ -2,6 +2,7 @@ import React from "react";
 import { Stack, Box, Typography } from "@mui/material"; //Stack from "@mui/material/Stack";
 import Icon from "../assets/icons/gym.png";
 import Exercises from "../components/Exercises";
+import ExerciseCard from "./ExerciseCard";
 
 const BodyPartCard = ({ item, bodyPart, setBodyPart }) => {
   return (
@@ -19,6 +20,7 @@ const BodyPartCard = ({ item, bodyPart, setBodyPart }) => {
       }}
       onClick={() => {
         setBodyPart(item);
+        console.log(item);
         window.scrollTo({ top: 1000, left: 100, behavior: "smooth" });
       }}
     >

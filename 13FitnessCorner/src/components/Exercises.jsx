@@ -1,7 +1,9 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import { fetchData, exerciseOptions } from "../utils/fetchData";
-import { Box, Stack, Typography } from "@mui/material";
+import { Box, Stack, Typography, Grid } from "@mui/material";
+
+import ExerciseCard from "./ExerciseCard";
 
 const Exercises = ({ setExercises, bodyPart, exercises }) => {
   console.log(exercises);
@@ -16,11 +18,11 @@ const Exercises = ({ setExercises, bodyPart, exercises }) => {
       <Typography sx={{ fontSize: { lg: "44px", xs: "25px" } }}>
         Showing Results
       </Typography>
-      <Stack>
-        {exercises.map((exercise) => (
-          <p>{exercise.name}</p>
+      <Grid container spacing={10} marginTop={"20px"}>
+        {exercises.map((exercises, index) => (
+          <ExerciseCard key={index} exercises={exercises} />
         ))}
-      </Stack>
+      </Grid>
     </Box>
   );
 };
