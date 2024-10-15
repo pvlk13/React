@@ -1,6 +1,7 @@
 import React from "react";
 import { Stack, Box, Typography } from "@mui/material"; //Stack from "@mui/material/Stack";
 import Icon from "../assets/icons/gym.png";
+import Exercises from "../components/Exercises";
 
 const BodyPartCard = ({ item, bodyPart, setBodyPart }) => {
   return (
