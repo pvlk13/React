@@ -5,8 +5,13 @@ import { Link } from "react-router-dom";
 const ExerciseCard = ({ exercises }) => {
   return (
     <Link className="exercise-card" to={`exercises/exercise/${exercises.id}`}>
-      <img src={exercises.gifUrl} loading="lazy" />
-      <Grid container>
+      <img
+        src={exercises.gifUrl}
+        loading="lazy"
+        sx={{ width: "100%", height: { xs: "250px", md: "300px" } }}
+        alt="exercise"
+      />
+      <Stack direction="row">
         <Button
           sx={{
             ml: "21px",
@@ -31,7 +36,7 @@ const ExerciseCard = ({ exercises }) => {
         >
           {exercises.target}
         </Button>
-      </Grid>
+      </Stack>
       <Typography
         ml="21px"
         color="#000"
