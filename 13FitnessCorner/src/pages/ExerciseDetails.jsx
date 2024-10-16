@@ -4,7 +4,7 @@ import Details from "../components/Details.jsx";
 import ExerciseVideos from "../components/ExerciseVideos";
 import SimilarExercises from "../components/SimilarExercises";
 import { useParams } from "react-router-dom";
-import { exerciseOptions, fetchData } from "../utils/fetchData";
+import { exerciseOptions, fetchData, youtubeOptions } from "../utils/fetchData";
 import { useState, useEffect } from "react";
 
 const ExerciseDetails = () => {
@@ -22,13 +22,22 @@ const ExerciseDetails = () => {
         exerciseOptions
       );
       setExerciseDetail(exerciseDetailData);
+      const exerciseVideosData = await fetchData(
+        `${youtubeSearchUrl}/search?query=${exerciseDetailData.name} exercise`,
+        youtubeOptions
+      );
+      setExerciseVideos(exerciseVideosData.contents);
+      console.log(exerciseVideosData.contents);
     };
     fetchExercisesData();
   }, [id]);
   return (
     <Stack>
       <Details exerciseDetail={exerciseDetail} />
-      <ExerciseVideos />
+      <ExerciseVideos
+        exerciseVideos={exerciseVideos}
+        name={exerciseDetail.name}
+      />
       <SimilarExercises />
     </Stack>
   );

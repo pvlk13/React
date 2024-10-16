@@ -32,7 +32,7 @@ const Detail = ({ exerciseDetail }) => {
       <Stack sx={{ gap: { lg: "35px", xs: "20px" } }}>
         <Typography
           sx={{ fontSize: { lg: "64px", xs: "30px" } }}
-          fontWeight={700}
+          fontWeight={400}
           textTransform="capitalize"
         >
           {name}
@@ -52,8 +52,8 @@ const Detail = ({ exerciseDetail }) => {
               sx={{
                 background: "#FFF2DB",
                 borderRadius: "50%",
-                width: "100px",
-                height: "100px",
+                width: "70px",
+                height: "70px",
               }}
             >
               <img
