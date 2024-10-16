@@ -1,6 +1,7 @@
 import React from "react";
 import { Grid, Typography, Button, Stack } from "@mui/material";
 import { Link } from "react-router-dom";
+import ExerciseDetails from "../pages/ExerciseDetails";
 
 const ExerciseCard = ({ exercises }) => {
   return (
@@ -21,6 +22,7 @@ const ExerciseCard = ({ exercises }) => {
             borderRadius: "20px",
             textTransform: "capitalize",
           }}
+          onClick={() => <ExerciseDetails />}
         >
           {exercises.bodyPart}
         </Button>
