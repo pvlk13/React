@@ -6,6 +6,7 @@ import RightArrowIcon from "../assets/icons/right-arrow.png";
 import LeftArrowIcon from "../assets/icons/left-arrow.png";
 import { Button, Typography } from "@mui/material";
 import { useContext } from "react";
+import ExerciseCard from "./ExerciseCard";
 
 const LeftArrow = () => {
   const { scrollPrev } = useContext(VisibilityContext);
@@ -26,16 +27,20 @@ const RightArrow = () => {
     </Typography>
   );
 };
-const HorizontalScrollbar = ({ data, bodyPart, setBodyPart }) => {
+const HorizontalScrollbar = ({ data, bodyPart, setBodyPart, isBodyPart }) => {
   return (
     <ScrollMenu LeftArrow={LeftArrow} RightArrow={RightArrow}>
       {data.map((item, index) => (
         <Box key={index}>
-          <BodyPartCard
-            item={item}
-            bodyPart={bodyPart}
-            setBodyPart={setBodyPart}
-          />
+          {isBodyPart ? (
+            <BodyPartCard
+              item={item}
+              bodyPart={bodyPart}
+              setBodyPart={setBodyPart}
+            />
+          ) : (
+            <ExerciseCard exercises={item} />
+          )}
         </Box>
       ))}
     </ScrollMenu>
