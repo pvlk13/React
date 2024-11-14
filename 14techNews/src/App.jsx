@@ -1,18 +1,19 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import reactLogo from "./assets/react.svg";
+import viteLogo from "/vite.svg";
+import "./App.css";
+import Pagination from "./components/Pagination";
+import Stories from "./components/Stories";
+import Search from "./components/Search";
 
 function App() {
-  
-
   return (
     <>
-      <h1 className="text-3xl font-bold p-5">
-      Hello world!
-    </h1>
+      <Search />
+      <Pagination />
+      <Stories />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
