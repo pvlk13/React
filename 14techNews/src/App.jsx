@@ -1,13 +1,11 @@
-import { useState, useEffect } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+import { useContext, useEffect } from "react";
 import "./App.css";
 import Pagination from "./components/Pagination";
 import Stories from "./components/Stories";
 import Search from "./components/Search";
-import { fetchApi } from "./../../realEstate/src/utils/FetchApi";
-
+import { AppContext, useGlobalHook } from "./context/context";
 function App() {
+  const data = useGlobalHook();
   const url = "http://hn.algolia.com/api/v1/search?query=html";
   const fetchAPI = async (url) => {
     try {
@@ -23,6 +21,7 @@ function App() {
   }, []);
   return (
     <>
+      <h1>Technical News {data}</h1>
       <Search />
       <Pagination />
       <Stories />
