@@ -8,6 +8,13 @@ const reducer = (state, action) => {
         hits: action.payload.hits,
         isloading: false,
       };
+    case "REMOVE_STORY":
+      return {
+        ...state,
+        hits: state.hits.filter((story) => {
+          return story.objectID !== action.payload;
+        }),
+      };
   }
   return <div></div>;
 };

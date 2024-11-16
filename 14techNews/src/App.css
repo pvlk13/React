@@ -1,3 +1,73 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  background-color: rgb(219, 230, 253);
+}
+h1 {
+  font-size: xx-large;
+  margin: 2rem 0;
+  text-align: center;
+}
+p {
+  margin: 2rem 0;
+  color: rgba(21, 19, 60, 0.5);
+  font-weight: 400;
+  font-size: 1.6rem;
+  display: inline-block;
+}
+span {
+  text-transform: capitalize;
+  font-weight: bold;
+}
+.stories-div {
+  display: flex;
+  max-width: 60%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 70px;
+}
+.card {
+  min-width: 50rem;
+  width: 40vm;
+  padding: 4rem;
+  background-color: #ffffff;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 0.5rem;
+  color: #15133c;
+  margin: 10px 20px;
+}
+.card-button {
+  flex-direction: row;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.card-button a {
+  color: #92b4ec;
+  font-weight: 400;
+  font-size: 1.6rem;
+}
+.card-button a:last-child {
+  color: red;
+}
+form {
+  display: grid;
+  place-content: center;
+}
+input {
+  padding: 1rem;
+  min-width: 40rem;
+  font-size: 2rem;
+  text-transform: capitalize;
+  border: none;
+  border-bottom: 0.2rem solid #15133c;
+  outline: none;
+}

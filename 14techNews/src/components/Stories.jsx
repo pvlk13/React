@@ -2,7 +2,7 @@ import React from "react";
 import { useGlobalHook } from "../context/context";
 
 function Stories() {
-  const { hits, isloading } = useGlobalHook();
+  const { hits, isloading, removePost } = useGlobalHook();
   if (isloading)
     return (
       <div>
@@ -24,7 +24,9 @@ function Stories() {
                 <a href={url} target="_blank">
                   Read More{" "}
                 </a>
-                <a href="#">Remove</a>
+                <a href="#" onClick={() => removePost(objectID)}>
+                  Remove
+                </a>
               </div>
             </div>
           </>
