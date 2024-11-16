@@ -8,6 +8,11 @@ const reducer = (state, action) => {
         hits: action.payload.hits,
         isloading: false,
       };
+    case "SEARCH_QUERY":
+      return {
+        ...state,
+        query: action.payload,
+      };
     case "REMOVE_STORY":
       return {
         ...state,

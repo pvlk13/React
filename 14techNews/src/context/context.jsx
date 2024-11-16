@@ -18,6 +18,9 @@ const AppProvider = ({ children }) => {
     dispatch({ type: "REMOVE_STORY", payload: id });
     console.log("remove");
   };
+  const searchHandler = (query) => {
+    dispatch({ type: "SEARCH_QUERY", payload: query });
+  };
   const fetchAPI = async (url) => {
     dispatch({ type: "GET_LOADING" });
     try {
@@ -36,10 +39,10 @@ const AppProvider = ({ children }) => {
   };
   useEffect(() => {
     fetchAPI(`${url}query=${state.query}`);
-  }, []);
+  }, [state.query]);
   return (
     <>
-      <AppContext.Provider value={{ ...state, removePost }}>
+      <AppContext.Provider value={{ ...state, removePost, searchHandler }}>
         {children}
       </AppContext.Provider>
       ;
