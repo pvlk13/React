@@ -42,7 +42,7 @@ span {
   background-color: #ffffff;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   border-radius: 0.5rem;
-  color: #15133c;
+  color: #2f2f31;
   margin: 10px 20px;
 }
 .card-button {
@@ -65,10 +65,19 @@ form {
 }
 input {
   padding: 1rem;
-  min-width: 40rem;
+  min-width: 50rem;
   font-size: 2rem;
   text-transform: capitalize;
   border: none;
-  border-bottom: 0.2rem solid #15133c;
+  border-bottom: 0.2rem solid #f6f5f9;
   outline: none;
+  margin: 70px;
+  background-color: #f6f5f9;
+  color: #15133c;
+}
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 25%;
 }

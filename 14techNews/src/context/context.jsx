@@ -9,6 +9,7 @@ const initialState = {
   hits: [],
   nbPages: 0,
   query: "CSS",
+  page: 0,
 };
 
 const AppContext = React.createContext();
@@ -21,6 +22,12 @@ const AppProvider = ({ children }) => {
   const searchHandler = (query) => {
     dispatch({ type: "SEARCH_QUERY", payload: query });
   };
+  const prevHandler = () => {
+    dispatch({ type: "PREV_PAGE" });
+  };
+  const nextHandler = () => {
+    dispatch({ type: "NEXT_PAGE" });
+  };
   const fetchAPI = async (url) => {
     dispatch({ type: "GET_LOADING" });
     try {
@@ -31,6 +38,7 @@ const AppProvider = ({ children }) => {
         type: "GET_STORIES",
         payload: {
           hits: data.hits,
+          nbPages: data.nbPages,
         },
       });
     } catch (error) {
@@ -38,11 +46,19 @@ const AppProvider = ({ children }) => {
     }
   };
   useEffect(() => {
-    fetchAPI(`${url}query=${state.query}`);
-  }, [state.query]);
+    fetchAPI(`${url}query=${state.query}&page=${state.page}`);
+  }, [state.query, state.page]);
   return (
     <>
-      <AppContext.Provider value={{ ...state, removePost, searchHandler }}>
+      <AppContext.Provider
+        value={{
+          ...state,
+          removePost,
+          searchHandler,
+          prevHandler,
+          nextHandler,
+        }}
+      >
         {children}
       </AppContext.Provider>
       ;
